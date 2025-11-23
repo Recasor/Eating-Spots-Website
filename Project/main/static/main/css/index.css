@@ -1,0 +1,160 @@
+.promo {
+  display: flex;
+}
+.promo__img {
+  max-width: 40vw;
+}
+.promo__content {
+  padding: 20px 40px;
+  background-color: #646473;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cafes__nav {
+  padding: 10px 0;
+}
+.cafes__search {
+  background-color: transparent;
+  border-bottom: 2px solid #646473;
+  font-size: 20px;
+  color: #646473;
+  display: block;
+  width: 100%;
+  padding-left: 30px;
+}
+.cafes__content {
+  background-color: #e3e3f7;
+  padding: 20px 0;
+}
+.cafes__content-search {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+.cafes__content-search::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/search.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.cafes__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding-top: 20px;
+}
+.cafes__card {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  display: flex;
+  gap: 30px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 18px;
+  align-items: stretch;
+}
+.cafes__card-img {
+  max-width: 25%;
+  width: 100%;
+}
+.cafes__card-img img {
+  border-radius: 16px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.cafes__card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+}
+.cafes__card-content_title {
+  font-size: 24px;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+.cafes__card-content_title:hover {
+  color: #2818bd;
+}
+.cafes__card-content_rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.cafes__card-content_description {
+  font-size: 18px;
+}
+.cafes__card-content_description span {
+  font-weight: 500;
+}
+.cafes__card-content_btn {
+  margin-top: auto;
+  display: block;
+  background-color: #2818bd;
+  color: #ffffff !important;
+  border-radius: 8px;
+  width: fit-content;
+  font-weight: 500;
+  padding: 7px 12px;
+  font-size: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+.cafes__card-content_btn:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 878px) {
+  .promo {
+    flex-direction: column;
+  }
+  .promo__title {
+    font-size: 34px;
+  }
+  .promo__content {
+    gap: 10px;
+  }
+  .promo__img {
+    width: 100%;
+    max-width: none;
+  }
+  .cafes__card {
+    flex-direction: column;
+    gap: 0;
+  }
+  .cafes__card-img {
+    max-width: none;
+  }
+  .cafes__card-img img {
+    aspect-ratio: 3/1;
+  }
+  .cafes__card-content_btn {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tab {
+    font-size: 16px;
+  }
+  .tab-parent {
+    gap: 15px;
+  }
+  .cafes__card-content_title {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

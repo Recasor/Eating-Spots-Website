@@ -1,0 +1,77 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Столовые МЭИ</title>
+
+    <link rel="stylesheet" href="{% static 'main/css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="{% static 'main/js/index.js' %}" defer></script>
+    <script src="{% static 'main/js/global.js' %}" defer></script>
+
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__container">
+            <a class="header__logo" href="">
+                Название
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="promo">
+            <img src="{% static 'main/img/promo.png' %}" alt="Фотография людей в кафе" class="promo__img">
+            <div class="promo__content">
+                <h1 class="promo__title">Заголовок</h1>
+                <p class="promo__text">
+                    Бебебе с бабаба бубубу брабрабра брат муравьи телепортироваться умеют яблоко зелёнок
+                </p>
+            </div>
+        </section>
+        <section class="cafes">
+            <div class="cafes__nav__container">
+                <nav class="cafes__nav">
+                    <ul class="cafes__nav-ul tab-parent">
+                        <li class="cafes__nav-item tab active" data-tab="все">
+                            <a href="#">Все</a>
+                        </li>
+                        <li class="cafes__nav-item tab" data-tab="столовая">
+                            <a href="#">Столовые</a>
+                        </li>
+                        <li class="cafes__nav-item tab" data-tab="кафе">
+                            <a href="#">Кафе</a>
+                        </li>
+                        <li class="cafes__nav-item tab" data-tab="ресторан">
+                            <a href="#">Рестораны</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="cafes__content">
+                <div class="cafes__content__container">
+                    <div class="cafes__content-search">
+                        <input class="cafes__search" id="searchCafe" type="text" placeholder="Поиск">
+                    </div>
+                    <div class="cafes__content-items cafes__items" id="cards"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <a class="footer__link" href="">
+                <img src="{% static 'main/img/icons/question.svg' %}" aria-hidden="true">
+                Помощь
+            </a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

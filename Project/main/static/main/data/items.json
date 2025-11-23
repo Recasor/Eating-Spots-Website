@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "МЭИ комбинат питания Столовая №10",
+    "type": "столовая",
+    "img": "img/cafes/1/preview.webp",
+    "rating": "4.4",
+    "foodRating": "84%",
+    "staffRating": "76%",
+    "purityRating": "42%",
+    "time": "пн-пт 8:00-17:00",
+    "address": "Красноказарменная ул., 17Б",
+    "phone": "+7 (495) 362-74-35",
+    "phoneLink": "+74953627435",
+    "description": "Что-то там хорошее вкусное позитивное круто йоу кайф и текста много тут ааааааааааа ааааааааа аааааааааа б блин пирог сок там хорошее вкусное позитивное круто йоу кайф и текста много тут ааааааааааа ааааааааа аааааааааа б блин пирог сок",
+    "gallery": [
+      "static/main/img/cafes/1/preview.webp",
+      "static/main/img/cafes/1/photos/1.webp",
+      "static/main/img/cafes/1/photos/2.webp",
+      "static/main/img/cafes/1/photos/3.webp"
+    ],
+    "menu": {
+      "салаты": [
+        {
+          "name": "Сельдь под шубой",
+          "weight": "150г",
+          "price": "49,00₽",
+          "photo": "img/cafes/1/menu/salads/сельдь под шубой.jpg"
+        },
+        {
+          "name": "Сельдь под шубой",
+          "weight": "150г",
+          "price": "49,00₽",
+          "photo": "img/cafes/1/menu/salads/сельдь под шубой.jpg"
+        },
+        {
+          "name": "Сельдь под шубой",
+          "weight": "150г",
+          "price": "49,00₽",
+          "photo": "img/cafes/1/menu/salads/сельдь под шубой.jpg"
+        },
+        {
+          "name": "Сельдь под шубой",
+          "weight": "150г",
+          "price": "49,00₽",
+          "photo": "img/cafes/1/menu/salads/сельдь под шубой.jpg"
+        },
+        {
+          "name": "Сельдь под шубой",
+          "weight": "150г",
+          "price": "49,00₽",
+          "photo": "img/cafes/1/menu/salads/сельдь под шубой.jpg"
+        },
+        {
+          "name": "Сельдь под шубой",
+          "weight": "150г",
+          "price": "49,00₽",
+          "photo": "img/cafes/1/menu/salads/сельдь под шубой.jpg"
+        }
+      ],
+      "супы": [
+        {
+          "name": "Суп из летучих мышей",
+          "weight": "333г",
+          "price": "1321,00",
+          "photo": ""
+        }
+      ],
+      "второе": [
+        {
+          "name": "Котлеты из мошек",
+          "weight": "332г",
+          "price": "13321,00",
+          "photo": ""
+        }
+      ],
+      "гарниры": [
+        {
+          "name": "Капустный стейк с фенхелем",
+          "weight": "32г",
+          "price": "21,00",
+          "photo": ""
+        }
+      ],
+      "напитки": [
+        {
+          "name": "Вино с мышатами",
+          "weight": "999г",
+          "price": "132321,00",
+          "photo": "img/cafes/1/menu/drinks/вино мыши.jpg"
+        }
+      ]
+    },
+    "mapUrl": "<iframe src=\"https://yandex.ru/map-widget/v1/?um=constructor%3Ad663ac62380966f4075325eb32f223c1b2d3123af6f4099f4526c8828a3b012c&amp;source=constructor\" width=\"500\" height=\"400\" frameborder=\"0\"></iframe>",
+    "mapLink": "https://yandex.ru/maps/-/CLv3jUP4",
+
+    "readyReviews": [
+      {
+        "author": "Павел",
+        "rating": 5,
+        "text": "Самое то и яблоки есть и блохи и кротовуха кайф короче"
+      },
+      {
+        "author": "Павел",
+        "rating": 3,
+        "text": "Самое то и яблоки есть и блохи и кротовуха кайф короче Самое то и яблоки есть и блохи и кротовуха кайф короче Самое то и яблоки есть и блохи и кротовуха кайф короче Самое то и яблоки есть и блохи и кротовуха кайф короче Самое то и яблоки есть и блохи и кротовуха кайф короче"
+      },
+      {
+        "author": "Павел",
+        "rating": 1,
+        "text": "Самое то и яблоки есть и блохи и кротовуха кайф короче"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Столовая ЦИАМ",
+    "type": "столовая",
+    "img": "img/cafes/2/preview.webp",
+    "rating": "4.4",
+    "time": "пн-чт 8:00-16:00, пт 8:00-15:00",
+    "address": "Авиамоторная ул., 2, корп. 34"
+  },
+  {
+    "id": 3,
+    "title": "Тест",
+    "type": "кафе",
+    "img": "img/cafes/2/preview.webp",
+    "rating": "4.6",
+    "time": "пн-чт 8:00-16:00, пт 8:00-15:00",
+    "address": "Авиамоторная ул., 2, корп. 34"
+  },
+  {
+    "id": 4,
+    "title": "Тест 2",
+    "type": "ресторан",
+    "img": "img/cafes/2/preview.webp",
+    "rating": "4.6",
+    "time": "пн-чт 8:00-16:00, пт 8:00-15:00",
+    "address": "Авиамоторная ул., 2, корп. 34"
+  }
+]

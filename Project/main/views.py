@@ -1,33 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
-def canteen(request):
-    return render(request, 'main/canteen.html')
+def index(request):
+    return render(request, 'main/index.html')
 
 
-def menu(request):
-    return render(request, 'main/menu.html')
-
-
-def reviews(request):
-    return render(request, 'main/reviews.html')
-
-
-def settings(request):
-    return render(request, 'main/settings.html')
-
-
-def profile(request):
-    return render(request, 'main/profile.html')
-
-
-def exit(request):
-    return render(request, 'main/exit.html')
-
-
-def scam(request):
-    return render(request, 'main/scam.html')
+def item(request):
+    return render(request, 'main/item.html')
 
 
 def canteen_1(request):
@@ -49,6 +28,7 @@ def canteen_4(request):
 
 def canteen_5(request):
     return render(request, 'main/Pages_of_canteens/canteen_5.html')
+
 
 
 
