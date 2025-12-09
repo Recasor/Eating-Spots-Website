@@ -14,7 +14,7 @@ function renderCards(tab, search) {
                     card.classList.add('cafes__item-card', 'cafes__card');
                     card.setAttribute('data-type', `${product.type}`);
                     card.innerHTML = `
-            <a href="/item?id=${product.id}" class="cafes__card-img"><img src="static/main/${product.img}" alt="Фотография заведения"></a>
+            <a href="/item?id=${product.id}" class="cafes__card-img"><img src="${product.img}" alt="Фотография заведения"></a>
                             <div class="cafes__card-content">
                                 <a href="/item?id=${product.id}" class="cafes__card-content_title">${product.title}</a>
                                 <div class="cafes__card-content_rating">${product.rating} 

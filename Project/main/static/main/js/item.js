@@ -9,6 +9,43 @@ async function renderItemPage() {
     return cafe;
 }
 
+function renderMenu(menuKeys) {
+    const container = document.querySelector('.menu__nav-ul.tab-parent');
+    if (!container) return;
+
+    container.innerHTML = menuKeys
+        .map((key, index) => `
+            <li class="menu__nav-item tab ${index === 0 ? 'active' : ''}" data-tab="${key}">
+                <a href="javascript:void(0)">${key}</a>
+            </li>
+        `)
+        .join('');
+
+    // Добавляем обработчики кликов на вкладки
+    container.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            e.preventDefault(); // Предотвращаем перезагрузку
+
+            // Находим родительскую вкладку
+            const tabItem = e.target.closest('.tab');
+            if (!tabItem) return;
+
+            const tabName = tabItem.dataset.tab;
+
+            // Убираем активный класс у всех вкладок
+            container.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Добавляем активный класс текущей вкладке
+            tabItem.classList.add('active');
+
+            // Вызываем renderCards для отображения контента выбранной вкладки
+            window.renderCards(tabName, '');
+        }
+    });
+}
+
 renderItemPage().then(cafe => {
     console.log(cafe);
 
@@ -21,9 +58,9 @@ renderItemPage().then(cafe => {
                 const item = document.createElement('div');
                 item.classList.add('menu__content-card', 'menu__card');
                 item.innerHTML = `
-            <img src="static/main/${i.photo}" alt="Фотография блюда">
+            <img src="${i.photo}" alt="Фотография блюда">
             <h3>${i.name}</h3>
-            <div><p>${i.weight}</p>
+            <div><p style="font-size: 18px;">${i.desc}</p>
             <p>${i.price}</p></div>
             `
                 menu.appendChild(item);
@@ -33,7 +70,13 @@ renderItemPage().then(cafe => {
         }
     }
 
-    renderCards('салаты', '')
+    if (cafe.menu && Object.keys(cafe.menu).length > 0) {
+        // Отрисовываем меню вкладок
+        renderMenu(Object.keys(cafe.menu));
+        // Показываем первую вкладку
+        window.renderCards(Object.keys(cafe.menu)[0], '');
+    }
+
     document.querySelector('.promo__title').innerText = cafe.title;
     document.querySelector('.promo__rating').innerText = cafe.rating;
     document.querySelector('.promo__rating').append(document.createElement('span'));
@@ -160,3 +203,6 @@ renderItemPage().then(cafe => {
         readyReviews.innerHTML = `<h3 class="empty-title">Отзывов на данное заведение пока нет<h3>`
     }
 });
+
+// Убрал дублирующий вызов renderItemPage() в DOMContentLoaded,
+// так как он уже вызывается в начале кода

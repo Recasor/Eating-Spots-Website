@@ -1,10 +1,23 @@
 import sqlite3
+import json
 
 
 def get_file_links(filename):
     with open("data/" + filename, "r") as f:
         links = [i.strip("\n") for i in f.readlines()]
     return links
+
+
+def get_interactive_map(link, r):
+    ll = link.split("ll=")[1].split("&mode")[0].split("%2C")
+    r = "/".join(r.split("/")[4:])
+    return (f"<iframe src=\"https://yandex.ru/map-widget/v1/{r}/?ll={ll[0]}%{ll[1]}&z=17\" width=\"500"
+            f"\" height=\"400\" frameborder=\"0\"></iframe>")
+
+
+def save_to_json(data):
+    with open("main/static/main/data/items.json", "w", encoding='utf-8') as json_file:
+        json.dump(data, json_file, ensure_ascii=False, indent=4)
 
 
 def create_sql():
